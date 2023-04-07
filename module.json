@@ -1,47 +1,41 @@
 {
-  "title": "PF1 Might Morphin Mod",
-  "description": "Mod to automate polymorph effects for Foundry VTT PF1e system",
-  "version": "0.5.0",
-  "authors": [
-    {
-      "name": "RViz3d",
-      "url": "https://github.com/RViz3d",
-      "flags": {}
-    }
-  ],
-  "esmodules": [
-    "morphin.js",
-    "scripts/mighty-morphin.js"
-  ],
-  "styles": [
-    "styles/mightyMorphin.css"
-  ],
-  "packs": [
-    {
-      "name": "macros",
-      "label": "Morphin Sample Macros",
-      "path": "packs/macros.db",
-      "type": "Macro",
-      "private": false,
-      "system": "pf1",
-      "flags": {}
-    }
-  ],
-  "url": "https://github.com/RViz3d/pf1-mighty-morphin-mod",
-  "manifest": "https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/latest/download/module.json",
-  "download": "https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/download/0.5.0/pf1-mighty-morphin.zip",
-  "id": "pf1-mighty-morphin",
-  "relationships": {
-    "systems": [
-      {
-        "id": "pf1",
-        "type": "system",
-        "compatibility": {}
-      }
-    ]
-  },
-  "compatibility": {
-    "minimum": "10",
-    "verified": "10"
-  }
+    "name": "pf1-mighty-morphin",
+    "title": "PF1 Might Morphin Mod",
+    "description": "Mod to automate polymorph effects for Foundry VTT PF1e system",
+    "version": "0.5.0",
+    "manifestPlusVersion": "1.0.0",
+    "minimumCoreVersion": "10",
+    "compatibleCoreVersion": "10",
+    "authors": [
+        {
+            "name": "d0ub7",
+            "url": "https://github.com/RViz3d"
+        }
+    ],
+    "system": [
+        "pf1"
+    ],
+    "esmodules": [
+        "morphin.js",
+        "scripts/mighty-morphin.js"
+    ],
+    "styles": [
+        "styles/mightyMorphin.css"
+    ],
+    "templates": [
+        "templates/beastShapeDialog.html"
+    ],
+    "packs": [
+        {
+            "name": "macros",
+            "label": "Morphin Sample Macros",
+            "path": "packs/macros.db",
+            "entity": "Macro",
+            "package": "pf1-mighty-morphin-iselda"
+        }
+    ],
+    "minimumSystemVersion": "0.81.1",
+    "url": "https://github.com/RViz3d/pf1-mighty-morphin-mod",
+    "manifest": "https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/latest/download/module.json",
+    "download": "https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/download/0.5.0/pf1-mighty-morphin.zip"
 }
