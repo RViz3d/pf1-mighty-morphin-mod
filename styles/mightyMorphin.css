@@ -36,3 +36,9 @@
     width: 140px;
     font-weight: bold;
 }
+
+#mighty-morphin-dragonShape #changePreview .previewLabel {
+    display: inline-block;
+    width: 140px;
+    font-weight: bold;
+}

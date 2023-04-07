@@ -289,6 +289,35 @@ MorphinChanges.changes = {
             }
         }
     },
+    dragonShape: {
+        dragon: {
+            
+            med: {
+                changes: [
+                    { formula: '4', operator: 'add', target: 'ability', subTarget: 'str', modifier: 'size', priority: 0, value: 4 },
+                    { formula: '2', operator: 'add', target: 'ability', subTarget: 'con', modifier: 'size', priority: 0, value: 2 },
+                    { formula: '4', operator: 'add', subTarget: 'nac', modifier: 'untyped', priority: 0, value: 4 }
+                ],
+                size: 'med'
+            },
+            lg: {
+                changes: [
+                    { formula: '6', operator: 'add', target: 'ability', subTarget: 'str', modifier: 'size', priority: 0, value: 6 },
+                    { formula: '4', operator: 'add', target: 'ability', subTarget: 'con', modifier: 'size', priority: 0, value: 4 },
+                    { formula: '6', operator: 'add', subTarget: 'nac', modifier: 'untyped', priority: 0, value: 6 }
+                ],
+                size: 'lg'
+            },
+            huge: {
+                changes: [
+                    { formula: '10', operator: 'add', target: 'ability', subTarget: 'str', modifier: 'size', priority: 0, value: 10 },
+                    { formula: '8', operator: 'add', target: 'ability', subTarget: 'con', modifier: 'size', priority: 0, value: 8 },
+                    { formula: '8', operator: 'add', subTarget: 'nac', modifier: 'untyped', priority: 0, value: 8 }
+                ],
+                size: 'huge'
+            }
+        }
+    },
     polymorphSize: {
         fine: [
             { formula: '6', operator: 'add', target: 'ability', subTarget: 'str', modifier: 'untyped', priority: 0, value: 6 },
@@ -2456,7 +2485,7 @@ MorphinChanges.changes = {
         speed: {
             land: 15,
             climb: 15,
-            swin: 15
+            swim: 15
         },
         senses: [
             1, 11
@@ -6934,6 +6963,959 @@ MorphinChanges.changes = {
             'Acid 20'
         ]
     },
+    'Juvenile Black dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        eres: [
+            'Acid 20'
+        ]
+        
+    
+    },
+    'Juvenile Blue dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['electricity'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            burrow: 20,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        eres: [
+            'Electricity 20'
+        ]
+        
+    
+    },
+    'Juvenile Green dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 40,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        eres: [
+            'Acid 20'
+        ]
+        
+    
+    },
+    'Juvenile Red dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'cold'
+        ],
+
+        eres: [
+            'Fire 30'
+        ]
+        
+    
+    },
+    'Juvenile Brass dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            burrow: 30,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'cold'
+        ],
+
+        eres: [
+            'fire 20'
+        ]
+        
+    
+    },
+    'Juvenile White dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['cold'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+
+        eres: [
+            'cold 20'
+        ]
+        
+    
+    },
+    'Juvenile Bronze dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['electricity'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+
+        eres: [
+            'electricity 20'
+        ]
+        
+    
+    },
+    'Juvenile Copper dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            climb: 20,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Spider Climb': { note: 'spider climb (always active'},
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+
+        eres: [
+            'acid 20'
+        ]
+        
+    
+    },
+    'Juvenile Gold dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+
+        eres: [
+            'fire 20'
+        ]
+        
+    
+    },
+    'Juvenile Silver dragon': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 6, count: 2 },
+            { name: 'Wing', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 6, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['6d8', {values: ['cold'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            fly: 60
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+
+        eres: [
+            'cold 30'
+        ]
+        
+    
+    },
+    'Adult Black dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '5/magic'
+        ],
+
+        eres: [
+            'Acid 20'
+        ]
+        
+    
+    },
+    'Adult Blue dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['electricity'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            burrow: 20,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '5/magic'
+        ],
+
+        eres: [
+            'Electricity 20'
+        ]
+        
+    
+    },
+    'Adult Green dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 40,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '5/magic'
+        ],
+
+        eres: [
+            'Acid 20'
+        ]
+        
+    
+    },
+    'Adult Red dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'cold'
+        ],
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'Fire 30'
+        ]
+        
+    
+    },
+    'Adult Brass dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            burrow: 30,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'cold'
+        ],
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'fire 20'
+        ]
+        
+    
+    },
+    'Adult White dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['cold'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'cold 20'
+        ]
+        
+    
+    },
+    'Adult Bronze dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['electricity'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'electricity 20'
+        ]
+        
+    
+    },
+    'Adult Copper dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            climb: 20,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Spider Climb': { note: 'spider climb (always active'},
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'acid 20'
+        ]
+        
+    
+    },
+    'Adult Gold dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'fire 20'
+        ]
+        
+    
+    },
+    'Adult Silver dragon': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2 },
+            { name: 'Tail Slap', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 8, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['8d8', {values: ['cold'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            fly: 90
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 30ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+        dr: [
+            '5/magic'
+        ],
+        eres: [
+            'cold 30'
+        ]
+        
+    
+    },
+    'Old Black dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 100ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '10/magic'
+        ],
+
+        di: [
+            'Acid'
+        ]
+        
+    
+    },
+    'Old Blue dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['electricity'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            burrow: 20,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 100ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '10/magic'
+        ],
+
+        di: [
+            'Electricity'
+        ]
+        
+    
+    },
+    'Old Green dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 40,
+            fly: 120
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 50ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '10/magic'
+        ],
+
+        di: [
+            'Acid'
+        ]
+        
+    
+    },
+    'Old Red dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 50ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'cold'
+        ],
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'Fire'
+        ]
+        
+    
+    },
+    'Old Brass dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            burrow: 30,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 100ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'cold'
+        ],
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'fire'
+        ]
+        
+    
+    },
+    'Old White dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['cold'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 50ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'cold'
+        ]
+        
+    
+    },
+    'Old Bronze dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['electricity'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 100ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'electricity'
+        ]
+        
+    
+    },
+    'Old Copper dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['acid'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            climb: 20,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Spider Climb': { note: 'spider climb (always active)'},
+            'Breath': { note: 'Breath area: 100ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'acid'
+        ]
+        
+    
+    },
+    'Old Gold dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['fire'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            swim: 60,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 50ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'fire'
+        ]
+        
+    
+    },
+    'Old Silver dragon': {
+        size: 'huge',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 2, diceSize: 6, count: 2 },
+            { name: 'Tail Slap', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Wing', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Breath Weapon', diceCount: 12, diceSize: 8, count: 1, special: ['Breath'], attackType: 'save', nonCrit: ['12d8', {values: ['cold'], custom: ''}] },
+        ],
+        speed: {
+            land: 60,
+            fly: 120
+        },
+        senses: [
+            17, 26
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 50ft cone. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        dv: [
+            'fire'
+        ],
+        dr: [
+            '10/magic'
+        ],
+        di: [
+            'cold'
+        ]
+        
+    
+    },
+
+
+
+
+
+
+
+
 
 };
 
@@ -6962,6 +7944,7 @@ MorphinChanges.SENSES = Object.freeze({
     DARKVISION70: { value: 8, name: 'Darkvision 70ft', setting: {dv: 70} },
     DARKVISION80: { value: 9, name: 'Darkvision 80ft', setting: {dv: 80} },
     DARKVISION90: { value: 10, name: 'Darkvision 90ft', setting: {dv: 90} },
+    DARKVISION120: { value: 26, name: 'Darkvision 120ft', setting: {dv: 120} },
     SCENT: { value: 11, name: 'Scent', setting: {custom: 'Scent'} },
     BLINDSENSE10: { value: 12, name: 'Blindsense 10ft', setting: {bs: 10} },
     BLINDSENSE20: { value: 13, name: 'Blindsense 20ft', setting: {bs: 20} },

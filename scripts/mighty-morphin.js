@@ -2,6 +2,7 @@ import { MorphinChanges } from './morphin-changes.js';
 import { MorphinBeastShape } from './morphin-beast-shape.js';
 import { MorphinElementalBody } from './morphin-elemental-body.js';
 import { MorphinPlantShape } from './morphin-plant-shape.js';
+import { MorphinDragonShape } from './morphin-dragon-shape.js';
 import DirectoryPicker from './DirectoryPicker.js';
 
 /**
@@ -461,7 +462,7 @@ export class MightyMorphinApp {
                 await shifter.items.find(o => o.type === 'buff' && o.name === changes.buffName).update({ 'data.active': false });
             }
             // Undo listed buffs
-            else if (['Beast Shape', 'Elemental Body', 'Plant Shape', 'Wild Shape'].includes(changes.source)) {
+            else if (['Beast Shape', 'Elemental Body', 'Plant Shape', 'Dragon Shape', 'Wild Shape'].includes(changes.source)) {
                 // Reverse any changes to armor
                 if (!!shifter.flags.mightyMorphin.armor.length) {
                     let armorFlag = shifter.flags.mightyMorphin.armor;
@@ -736,6 +737,24 @@ export class MightyMorphinApp {
         // Create plant shape form if a single actor chosen not already under effects from this mod
         if (!!shifter && !shifter.flags.mightyMorphin) {
             let dia = new MorphinPlantShape(level, shifter.id, source).render(true);
+        }
+        else if (!!shifter?.flags.mightyMorphin) {
+            ui.notifications.warn(shifter.name + ' is already under the effects of a change from ' + shifter.flags.mightyMorphin.source);
+        }
+    }
+
+    /**
+     * Creates the Dragon Shape buff and effects on the actor using the MorphinElementalBody class
+     * 
+     * @param {number} level The level of dragon shape spell being cast (1-3)
+     * @param {string} [source='dragon Shape'] The source of the dragon shape spell effect
+     */
+    static async dragonShape(level, source = 'dragon Shape') {
+        let shifter = MightyMorphinApp.getSingleActor();
+
+        // Create dragon shape form if a single actor chosen not already under effects from this mod
+        if (!!shifter && !shifter.flags.mightyMorphin) {
+            let dia = new MorphinDragonShape(level, shifter.id, source).render(true);
         }
         else if (!!shifter?.flags.mightyMorphin) {
             ui.notifications.warn(shifter.name + ' is already under the effects of a change from ' + shifter.flags.mightyMorphin.source);

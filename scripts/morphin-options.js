@@ -441,6 +441,39 @@ MorphinOptions.monstrousHumanoid = [
 
 MorphinOptions.giant = [];
 
+MorphinOptions.dragon = [
+    { name: 'Juvenile Black dragon', size: 'med' },
+    { name: 'Juvenile Blue dragon', size: 'med' }, 
+    { name: 'Juvenile Green dragon', size: 'med' },  
+    { name: 'Juvenile Red dragon', size: 'med' },  
+    { name: 'Juvenile White dragon', size: 'med' },  
+    { name: 'Juvenile Brass dragon', size: 'med' },  
+    { name: 'Juvenile Bronze dragon', size: 'med' },  
+    { name: 'Juvenile Copper dragon', size: 'med' },  
+    { name: 'Juvenile Gold dragon', size: 'med' },  
+    { name: 'Juvenile Silver dragon', size: 'med' },
+    { name: 'Adult Black dragon', size: 'lg' },
+    { name: 'Adult Blue dragon', size: 'lg' }, 
+    { name: 'Adult Green dragon', size: 'lg' },  
+    { name: 'Adult Red dragon', size: 'lg' },  
+    { name: 'Adult White dragon', size: 'lg' },  
+    { name: 'Adult Brass dragon', size: 'lg' },  
+    { name: 'Adult Bronze dragon', size: 'lg' },  
+    { name: 'Adult Copper dragon', size: 'lg' },  
+    { name: 'Adult Gold dragon', size: 'lg' },  
+    { name: 'Adult Silver dragon', size: 'lg' }, 
+    { name: 'Old Black dragon', size: 'huge' },
+    { name: 'Old Blue dragon', size: 'huge' }, 
+    { name: 'Old Green dragon', size: 'huge' },  
+    { name: 'Old Red dragon', size: 'huge' },  
+    { name: 'Old White dragon', size: 'huge' },  
+    { name: 'Old Brass dragon', size: 'huge' },  
+    { name: 'Old Bronze dragon', size: 'huge' },  
+    { name: 'Old Copper dragon', size: 'huge' },  
+    { name: 'Old Gold dragon', size: 'huge' },  
+    { name: 'Old Silver dragon', size: 'huge' }       
+];
+
 MorphinOptions.humanoid = [];
 
 MorphinOptions.swarm = [];
