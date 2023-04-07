@@ -1,7 +1,7 @@
 # Mighty Morphin Mod
 ## Installation
 
-https://github.com/d0ub7/pf1-mighty-morphin-mod/releases/latest/download/module.json
+https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/latest/download/module.json
 
 ## Usage
 
@@ -21,6 +21,7 @@ Currently supports buff generation and application of effects of the following s
 * Elemental Body I-IV
 * Plant Shape I-III
 * Druid Wild Shape (As Beast Shape, Elemental Body, and Plant Shape)
+* Dragon shape( Form of the dragon) I-III
 
 Effects such as Beast Shape include creating attacks, replacing speeds, replacing senses, etc.
 
