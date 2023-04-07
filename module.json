@@ -1,11 +1,11 @@
 {
   "title": "PF1 Might Morphin Mod",
   "description": "Mod to automate polymorph effects for Foundry VTT PF1e system",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "authors": [
     {
-      "name": "d0ub7",
-      "url": "https://github.com/d0ub7",
+      "name": "RViz3d",
+      "url": "https://github.com/RViz3d",
       "flags": {}
     }
   ],
@@ -27,9 +27,9 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/d0ub7/pf1-mighty-morphin-mod",
-  "manifest": "https://github.com/d0ub7/pf1-mighty-morphin-mod/releases/latest/download/module.json",
-  "download": "https://github.com/d0ub7/pf1-mighty-morphin-mod/releases/download/0.4.2/pf1-mighty-morphin.zip",
+  "url": "https://github.com/RViz3d/pf1-mighty-morphin-mod",
+  "manifest": "https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/latest/download/module.json",
+  "download": "https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/download/0.5.0/pf1-mighty-morphin.zip",
   "id": "pf1-mighty-morphin",
   "relationships": {
     "systems": [
