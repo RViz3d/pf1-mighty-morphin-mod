@@ -749,7 +749,7 @@ export class MightyMorphinApp {
      * @param {number} level The level of dragon shape spell being cast (1-3)
      * @param {string} [source='dragon Shape'] The source of the dragon shape spell effect
      */
-    static async dragonShape(level, source = 'dragon Shape') {
+    static async dragonShape(level, source = 'Dragon Shape') {
         let shifter = MightyMorphinApp.getSingleActor();
 
         // Create dragon shape form if a single actor chosen not already under effects from this mod

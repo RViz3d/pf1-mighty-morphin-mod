@@ -1,14 +1,14 @@
 {
     "name": "pf1-mighty-morphin",
-    "title": "PF1 Might Morphin Mod",
-    "description": "Mod to automate polymorph effects for Foundry VTT PF1e system",
+    "title": "PF1 Mighty Morphin Mod",
+    "description": "Mod to automate polymorph effects for Foundry VTT PF1e system, from websterguy, based on the branch 0.4.2 from d0ub7. This special release adds Form of the dragon, not yet fully functional",
     "version": "0.5.0",
     "manifestPlusVersion": "1.0.0",
     "minimumCoreVersion": "10",
     "compatibleCoreVersion": "10",
     "authors": [
         {
-            "name": "d0ub7",
+            "name": "RViz3d",
             "url": "https://github.com/RViz3d"
         }
     ],

@@ -8,7 +8,7 @@ import { MorphinOptions } from './morphin-options.js';
 export class MorphinDragonShape extends FormApplication {
     /**
      * @inheritdoc
-     * @param {number} level The level of beast shape to use 1 - 4
+     * @param {number} level The level of beast shape to use 1 - 3
      * @param {string} actorId The id of the actor that will change shape
      * @param {string} source The source of the beast shape effect
      */
@@ -521,8 +521,8 @@ export class MorphinDragonShape extends FormApplication {
         $('#submitButton').on('click', async (event) => await this.applyChanges(event, $('#formSelect')[0].value));
     }
 }
-// The allowed special properties and attacks for plant shape I-III
-MorphinPlantShape.allowedSpecials = {
+// The allowed special properties and attacks for dragon shape I-III
+MorphinDragonShape.allowedSpecials = {
     '1': ['Breath', 'Spider Climb'],
     '2': ['Breath', 'Spider Climb'],
     '3': ['Breath', 'Spider Climb']

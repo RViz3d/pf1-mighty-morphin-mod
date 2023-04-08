@@ -14,7 +14,7 @@ Hooks.once('init', () => {
   game.mightyMorphin.beastShape = MightyMorphinApp.beastShape;
   game.mightyMorphin.elementalBody = MightyMorphinApp.elementalBody;
   game.mightyMorphin.plantShape = MightyMorphinApp.plantShape;
-  game.mightyMorphin.plantShape = MightyMorphinApp.dragonShape;
+  game.mightyMorphin.dragonShape = MightyMorphinApp.dragonShape;
 });
 
 // Set up static sizes from the system's info
