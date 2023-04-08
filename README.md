@@ -1,4 +1,4 @@
-# Mighty Morphin Mod [NON FUNCTIONAL ATM]
+# Mighty Morphin Mod [``form of the dragon (dragon shape)`` not yet fully implemented]
 ## Installation
 
 https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/latest/download/module.json
@@ -20,13 +20,13 @@ Currently supports buff generation and application of effects of the following s
 * Beast Shape I-IV
 * Elemental Body I-IV
 * Plant Shape I-III
-* Dragon Shape I-III (form of the dragon)
+* Dragon Shape I-II (form of the dragon)
 * Druid Wild Shape (As Beast Shape, Elemental Body, and Plant Shape)
 
 Effects such as Beast Shape include creating attacks, replacing speeds, replacing senses, etc.
 
 ## Future Plans
-
+* Dragon Shape III
 * Implementing other form changes, such as Alter Self, Monstrous Physique, etc.
 
 ## Known Issues
