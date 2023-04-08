@@ -1,4 +1,5 @@
-# Mighty Morphin Mod [``form of the dragon (dragon shape)`` not yet fully implemented]
+# Mighty Morphin Mod 
+[``form of the dragon`` (dragon shape) not fully implemented]
 ## Installation
 
 https://github.com/RViz3d/pf1-mighty-morphin-mod/releases/latest/download/module.json
